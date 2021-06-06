@@ -1,23 +1,23 @@
 import logo from './logo.svg';
+import Trophy from "./Pictures/sports-icon.png"
 import './App.css';
+import CategoryButtons from './CategoryButtons';
+import { Layout, Avatar } from 'antd';
+
+const { Header, Footer } = Layout;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Header className="Head">
+          <h1><img className="avatar-left" src={Trophy}/>Trivia Battle<img className="avatar-right" src={Trophy}/></h1>
+        </Header>
+        <main className="main-content">
+          <CategoryButtons />
+        </main>
+        <Footer className="Foot">Trivia App Created by Quentin MacFarlane</Footer>
+      </Layout>
     </div>
   );
 }
